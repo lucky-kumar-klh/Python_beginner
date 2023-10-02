@@ -1,4 +1,4 @@
-n = int(input('Enter any number :' ))
+n = int(input('Enter any number : '))
 num = n 
 sum = 0
 while n != 0 :
