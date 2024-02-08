@@ -8,10 +8,6 @@
 # if isPrime(x):
 #   print(str(x)+" is Composite Number")
 # else : print(str(x)+" is a Prime Number")
-dictionary = dict([
-    ("name", "lucky kumar"),
-    ("university", "KLU")
-])
 
 # But this is a Normal list
 # this_is_a_list = ([
@@ -19,4 +15,8 @@ dictionary = dict([
 #     ("university", "KLU")
 # ])
 
-print(dictionary)
+my_dict = {'a': 10, 'b': 20}
+
+print(my_dict['a'])
+print(my_dict['b'])
+print(my_dict['z'])
