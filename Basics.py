@@ -15,8 +15,11 @@
 #     ("university", "KLU")
 # ])
 
-my_dict = {'a': 10, 'b': 20}
+# my_dict = {'a': 10, 'b': 20}
 
-print(my_dict['a'])
-print(my_dict['b'])
-print(my_dict['z'])
+# print(my_dict['a'])
+# print(my_dict['b'])
+# print(my_dict['z'])
+my_set = set(["hi", "yeah", "hi"])
+print(my_set)
+print(type(my_set))
