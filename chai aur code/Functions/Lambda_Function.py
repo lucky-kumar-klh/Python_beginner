@@ -6,3 +6,4 @@ def cube(n):
 cube = lambda num: num ** 3
 
 print(cube(4))
+print(cube(2))
