@@ -19,6 +19,7 @@ class Car:
 
 my_car = Car("Renault", "Duster")
 
+print(isinstance(my_car, Car))
 print(my_car.fullname())
 print(my_car.fuel_type())
 # print(my_car.__brand)  # Private attrites can't be accessed directly
