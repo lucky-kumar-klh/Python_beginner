@@ -1,6 +1,5 @@
 # The name of the input function in a Decorator can be anything
 def login(function):
-
     '''
     This modified function should recieve arguments that were initially passed  
     in the original function. In this situation, it's function
