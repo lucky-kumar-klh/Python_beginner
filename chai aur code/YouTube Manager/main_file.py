@@ -19,10 +19,11 @@ def write_data(videos):
 
 
 def list_all_videos(videos):
-    if videos.empty():
+    if len(videos) == 0:
         print("Empty List.\nTry Adding some videos.", end = '\n\n')
         return
-    print("")
+    
+    print("Here's Your List of Videos:", end = '\n\n')
     print('*' * 100)
     for index, vid in enumerate(videos, start = 1):
         print(f"{index}. Name: {vid['name']}, Duration: {vid['time']}")
@@ -37,25 +38,30 @@ def add_video(videos):
     print()
 
 def update_video(videos):
-    if videos.empty():
-        print("Your List is Empty")
-        print("Add a video first !")
+    if len(videos) == 0:
+        print("\nYour List is Empty")
+        print("Add a video first !", end = '\n\n')
         return 
+    
     list_all_videos(videos)
-    update = int(input("Which video to Update: "))
-    if 1 <= update <= len(videos):
+    index = int(input("Which video to Update: "))
+    if 1 <= index <= len(videos):
         name = input("Enter New name: ")
         time = input("Enter New time: ")
-        videos[update-1] = [{'name': name, 'time': time}]
-        print("Successfully Updated !")
+        videos[index-1] = {'name': name, 'time': time}
+        print("Successfully Updated !", end = '\n\n')
         # write the new data in the file
-        write_data(videos)  
+        write_data(videos)
 
     else:
         print("Entered Video number Not Found")
         print("Try Again !", end = '\n\n')
 
 def delete_video(videos):
+    if len(videos) == 0:
+        print("\nYour List is Empty\nNo video to delete", end = '\n\n')
+        return
+    
     print("\nHere are your list of Videos:")
     list_all_videos(videos)
     delete = int(input("Which video you want to delete: "))
