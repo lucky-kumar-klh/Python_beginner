@@ -14,5 +14,3 @@ my_electric_car = Electric_car("Tesla", "Model S", "100 KWH")
 print(my_electric_car.fullname())
 print(my_electric_car.fuel_type())
 print(my_electric_car.battery_size)
-
-
