@@ -24,11 +24,15 @@ from Phone import Phone
 # for item in Item.all_items:
 #     print(item.item)
 
-Item.instantiate_from_csv()
-print(Item.all_items)
+# Item.instantiate_from_csv()
+# print(Item.all_items)
 
-print(Item.is_integer(7.0))
+# print(Item.is_integer(7.0))
 
-phone1 = Phone("Samsung", 3000, 3, 1)
+# phone1 = Phone("Samsung", 3000, 3, 1)
 
-print(Phone.all_items)
+# print(Phone.all_items)
+
+item_2 = Item("CPU", 2000, 3)
+item_2.__item = "i5_12550U"
+print(item_2.get_item())

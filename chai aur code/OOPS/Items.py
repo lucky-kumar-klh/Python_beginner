@@ -13,13 +13,17 @@ class Item:
         assert quantity >= 0, f"Quantity {quantity} should be greater than or equal to zero"
         
         # Instance Attributes
-        self.item = item
+        self.__item = item
         self.price = price
         self.quantity = quantity
 
         # Storing all the items (as objects itself) in a list 'all_items'
         Item.all_items.append(self)
     
+    # @property   # Attribute to make it Read-Only
+    def get_item(self):
+        return f"{self.__item}"
+
     def calculate_total_price(self):
         return f"Total Price: {self.price * self.quantity}"
     
@@ -52,4 +56,5 @@ class Item:
             return False
 
     def __repr__(self):
-        return f"['{self.item}', '{self.price}', '{self.quantity}']"
+        return f"[{self.__class__.__name__}: {self.item}, {self.price}, {self.quantity}]"
+    
