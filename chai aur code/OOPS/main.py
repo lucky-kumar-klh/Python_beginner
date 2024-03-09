@@ -10,7 +10,7 @@ from Phone import Phone
 # print(item1.calculate_total_price())
 # print(Item.pay_rate)
 
-# '__dict__' return a dictionary of all the attributes available for the oblject/class
+# '__dict__' return a dictionary of all the attributes available for the object/class
 # print(item1.__dict__)  # All the attributes at instance level
 # print(Item.__dict__)  # All the attributes at class level
 # print(item1.apply_discount())
@@ -24,15 +24,16 @@ from Phone import Phone
 # for item in Item.all_items:
 #     print(item.item)
 
-# Item.instantiate_from_csv()
-# print(Item.all_items)
+Item.instantiate_from_csv()
+print(Item.all_items)
 
 # print(Item.is_integer(7.0))
 
-# phone1 = Phone("Samsung", 3000, 3, 1)
+phone1 = Phone("Samsung", 3000, 3, 1)
 
 # print(Phone.all_items)
 
 item_2 = Item("CPU", 2000, 3)
-item_2.__item = "i5_12550U"
-print(item_2.get_item())
+# item_2.__item = "i5_12550U"
+item_2.set_item_name("i5_12550U")
+print(item_2.get_item_name())
