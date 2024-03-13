@@ -49,11 +49,8 @@ class Item:
         for i in items_list:
             # print(i)
             # Item(item, price, quantity)
-            Item(   # Instantiating object from the csv file
-                item = i.get("item"),   # return the value of the key from dictionary
-                price = float(i.get("price")),
-                quantity = int(i.get("quantity")),
-            )
+            # Instantiating object from the csv file
+            Item(item = i.get("item"), price = float(i.get("price")), quantity = int(i.get("quantity")),)
 
     # staticmethod is also equivalent to writing a function above class (irrespective of class)
     # As, it doesn't have 'self' or 'cls' arguments by default, it's just a regular def
