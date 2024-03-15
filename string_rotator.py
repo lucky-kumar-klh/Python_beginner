@@ -11,4 +11,4 @@ def rotate_word(word, rotate_by):
                 ans += chr(64 + rotate_by % 26)
             else:
                 ans += chr(rotate_by + ord(alphabet))
-    print("Rotated Word:",ans)
+    print("Rotated Word:", ans)
