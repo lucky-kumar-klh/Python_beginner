@@ -6,7 +6,7 @@ def rotate_word(word, rotate_by):
                 ans += chr(96 + rotate_by % 26)
             else:
                 ans += chr(rotate_by + ord(alphabet))
-        else:  
+        else:
             if ord(alphabet) + rotate_by > 90:
                 ans += chr(64 + rotate_by % 26)
             else:
