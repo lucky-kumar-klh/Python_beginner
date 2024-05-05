@@ -9,6 +9,7 @@ WIDTH, HEIGHT = 800, 700
 WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
 
 pygame.display.set_caption("Space Dodge")
+
 game_bgm = pygame.mixer.music.load("DodgeSong.mp3")
 pygame.mixer.music.play(-1)
 # pygame.mixer.music.set_volume(0.5)  # Set volume of background music (0.0 - 1.0)
@@ -67,8 +68,6 @@ def main():
         star_count += loop_clock.tick(60)  # To update every second
         elapsed_time = time.time() - start_time
 
-
-
         # Generate 3 random stars
         if star_count > star_add_increment:
             for _ in range(3):
@@ -111,7 +110,7 @@ def main():
             lost_text = FONT.render("You Lost", 1, "white")
             score_text = FONT.render(f"Your Score: {player_score}", 1, "white")
             WINDOW.blit(lost_text, (WIDTH/2 - lost_text.get_width()/2, HEIGHT/2 - lost_text.get_width()/2))
-            WINDOW.blit(score_text, (WIDTH/2 - lost_text.get_width()/2 - 10, HEIGHT/2 - lost_text.get_width()))
+            WINDOW.blit(score_text, (WIDTH/2 - lost_text.get_width()/2 - 20, HEIGHT/2 - lost_text.get_width()))
             pygame.display.update()
             pygame.time.delay(4000)
             break
